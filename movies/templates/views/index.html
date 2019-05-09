@@ -1,0 +1,38 @@
+{% extends "views/layout.html" %}
+
+
+
+{% block content %}
+
+    <h1 class="text-center">Movies Catalog</h1>
+
+<table class="table table-bordered table-stripped table-hover">
+  <thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Stock</th>
+        <th>Price</th>
+        <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+          {% for movie in catalog %}
+          <tr>
+            <td>{{movie.id}}</td>
+            <td><a href="/movies/detail/{{movie.id}}">{{movie.title}}</a></td>
+            <td>{{movie.release_year}}</td>
+            <td>{{movie.stock}}</td> 
+            <td>$ {{movie.price}}</td>
+            <td> <button movie-id= "{{movie.id}}" class= "btn btn-sm btn-success btn-add">Add to Cart</button></td>
+          </tr>
+        {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock %}
+
+
+

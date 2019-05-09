@@ -1,0 +1,38 @@
+{% extends "views/layout.html" %}
+
+
+
+{% block content %}
+
+    <h1 class="text-center">Movies Catalog</h1>
+
+<table id="tblCatalog" class="table table-bordered table-stripped table-hover">
+  <thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Stock</th>
+        <th>Price</th>
+        <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+
+<div class="row">
+    <div class="col-md-4 offset-4">
+        <label>Items in Cart:</label>
+        <input type="text" id="txtNumberItems">
+        <br>
+        <label>Total to pay:</label>
+        <input type="text" id="txtTotal">
+        <br>
+        <button id="btnSave" class="btn btn-primary">Register Order</button>
+    </div>
+</div>
+
+
+{% endblock %}
